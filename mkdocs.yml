@@ -1,0 +1,62 @@
+site_name: AI活用マニュアル
+site_description: AIツール（チャットAI・コーディングAI・保管庫系ツール）を体系的に整理する個人用ナレッジベース
+site_author: 大輝
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: ダークモードに切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードに切り替え
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - def_list
+
+nav:
+  - ホーム: index.md
+  - 用語集: glossary/index.md
+  - ツール別基礎編:
+      - ツール別基礎編について: tools/index.md
+      - ChatGPT: tools/chatgpt.md
+      - Gemini: tools/gemini.md
+      - Claude:
+          - Claude（チャット）: tools/claude-chat.md
+          - Claude（Cowork）: tools/claude-cowork.md
+          - Claude（Code）: tools/claude-code.md
+      - Codex: tools/codex.md
+      - NotebookLM: tools/notebooklm.md
+      - Obsidian等の保管庫系ツール: tools/obsidian.md
+  - 応用編: advanced/index.md
+  - 気になる欄: curious/index.md
+  - トレンド・更新ログ: updates/index.md
