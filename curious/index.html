@@ -895,6 +895,51 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="履歴">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2026-07-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-07-28
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-07-28">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gitgithubvercel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git・GitHub・リポジトリ・プッシュ・デプロイ・Vercelの違い
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        フロントエンドとバックエンドの違い
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -957,7 +1002,30 @@
 <p>Claude Codeとの会話で「〇〇について教えて」のように聞かれたタイミングで、その回答をこのページに追記する(呼びかけ式)。過去の記録は上書きせず、履歴として残していく。</p>
 </div>
 <h2 id="_2">履歴<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><em>(まだ記録はありません。何か気になることを聞いてみてください。)</em></p>
+<h3 id="2026-07-28">2026-07-28<a class="headerlink" href="#2026-07-28" title="Permanent link">&para;</a></h3>
+<h4 id="gitgithubvercel">Git・GitHub・リポジトリ・プッシュ・デプロイ・Vercelの違い<a class="headerlink" href="#gitgithubvercel" title="Permanent link">&para;</a></h4>
+<p>似た言葉が多くて混乱しやすいところ。実はちょうど今回、このサイトを公開する作業の中で全部使ったので、それを例に整理する。</p>
+<p><strong>一言でいうと</strong>: それぞれ「役割」が違う。Gitは変更履歴を記録する仕組み、リポジトリはその履歴とファイルが入った箱、GitHubはその箱をインターネット上に置くサービス、プッシュは手元の変更をその箱に送る操作、デプロイはファイルを実際にアクセスできる状態にする作業、Vercelはデプロイをしてくれる別の会社のサービス。</p>
+<p>もう少し詳しく、1つずつ:</p>
+<ul>
+<li><strong>Git</strong>: ファイルの変更履歴を記録する仕組み(技術そのもの)。Wordの「変更履歴」機能に近いが、複数のファイルをまとめて管理できる。誰が・いつ・何を変えたかを記録し、過去のバージョンに戻すこともできる。自分のパソコンの中だけでも使えるもので、インターネットは関係ない。今回、<code>ai-manual</code>フォルダで<code>git init</code>というコマンドを実行した瞬間から、このフォルダの変更履歴がGitで記録され始めた。</li>
+<li><strong>リポジトリ(Repository)</strong>: Gitで管理されているファイル一式+変更履歴が入った「箱」のこと。<code>ai-manual</code>フォルダそのものが、<code>git init</code>した時点でリポジトリになった。</li>
+<li><strong>GitHub</strong>: リポジトリをインターネット上に保管して、どこからでもアクセスしたり、他の人と共有したりできるようにする「サービス」。自分のパソコンの中にしかなかったリポジトリのコピーをGitHub上にも置くことで、パソコンが壊れてもデータが残ったり、他の場所からも同じプロジェクトを見られるようになる。今回は<code>daifuk00003-alt/ai-manual</code>というリポジトリをGitHub上に作った。</li>
+<li><strong>プッシュ(push)</strong>: 「手元のパソコンにあるリポジトリの最新の変更を、GitHub上のリポジトリに送って反映させる」操作。手元で書いた原稿を、クラウドの倉庫に「これが最新版です」と送るイメージ。今回、ファイルを編集するたびに<code>git push</code>していた。</li>
+<li><strong>デプロイ(deploy)</strong>: 書いたファイルを、実際に誰かがブラウザで見られる状態にする作業。GitHubにプッシュしただけでは、まだ「ソースコード(元になるファイル)が保管されている」だけで、Webサイトとして表示される状態にはなっていない。今回は<code>mkdocs gh-deploy</code>というコマンドで、Markdownファイルを実際に表示できるHTMLというファイル形式に変換し、それを「GitHub Pages」という表示専用の置き場所に送った。これで初めて <code>https://daifuk00003-alt.github.io/ai-manual/</code> というURLで実際にアクセスできるようになった。この一連の作業が「デプロイ」。</li>
+<li><strong>Vercel</strong>: GitHub Pagesと似た役割を持つ、別の会社が提供するデプロイ・ホスティング(サイトを置いておく)サービス。GitHubのリポジトリと連携させておくと、プッシュするたびに自動でデプロイしてくれる点はGitHub Pagesと共通している。今回のような単純なMarkdownサイトはGitHub Pagesで十分だが、もっと複雑な(裏側でデータ処理が必要な)Webアプリを作る場合は、Vercelのようなサービスが使われることが多い。</li>
+</ul>
+<p><strong>具体例</strong>: 今回の一連の流れをまとめると、「<code>ai-manual</code>フォルダをリポジトリ化(Git)→GitHub上に置き場所を作成(GitHub)→手元の変更をそこに送信(プッシュ)→実際に見られる形にして公開(デプロイ、今回はGitHub Pages)」という順番になる。</p>
+<hr />
+<h4 id="_3">フロントエンドとバックエンドの違い<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p><strong>一言でいうと</strong>: フロントエンドは「ユーザーが直接目にする画面側」、バックエンドは「画面には出てこない、裏側でデータ処理をする部分」。</p>
+<p>もう少し詳しく:</p>
+<ul>
+<li><strong>フロントエンド</strong>: ブラウザの中で動く部分。画面のレイアウト、文字や画像の見た目、ボタンを押した時の動き等を担当する。主にHTML・CSS・JavaScriptという言語で作られ、ユーザーのパソコンやスマホの中で実行される。</li>
+<li><strong>バックエンド</strong>: ユーザーからは直接見えない、サーバー(どこか別のコンピューター)側で動く部分。データベースとのやり取り、ログイン処理、複雑な計算等を担当する。Python・Node.js・Goなど様々な言語が使われる。</li>
+</ul>
+<p><strong>具体例</strong>: ネット通販サイトで例えると、「商品一覧の見た目」「カートに追加ボタン」はフロントエンド。「実際に在庫があるか確認する」「注文情報をデータベースに保存する」処理はバックエンド。</p>
+<p>このai-manualサイト自体で言うと: MkDocsで作った今のサイトは、事前にすべてHTMLファイルへ変換されて置いてあるだけの「<a href="../glossary/#static-site-dynamic-site">静的サイト</a>」なので、実質的にフロントエンドしか存在しない(バックエンドがない)。データ処理をする裏側の仕組みが不要なぶん、GitHub Pagesのようなシンプルな置き場所だけで公開できている。</p>
 
 
 
