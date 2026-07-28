@@ -1,10 +1,17 @@
 site_name: AI活用マニュアル
 site_description: AIツール（チャットAI・コーディングAI・保管庫系ツール）を体系的に整理する個人用ナレッジベース
 site_author: 大輝
+site_url: https://daifuk00003-alt.github.io/ai-manual/
+
+repo_url: https://github.com/daifuk00003-alt/ai-manual
+repo_name: daifuk00003-alt/ai-manual
 
 theme:
   name: material
   language: ja
+  icon:
+    logo: material/robot-happy
+    repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -22,13 +29,23 @@ theme:
         name: ライトモードに切り替え
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
     - navigation.indexes
+    - navigation.tracking
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
     - toc.integrate
+    - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+    - content.tabs.link
 
 markdown_extensions:
   - toc:
@@ -39,9 +56,19 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - tables
   - attr_list
+  - md_in_html
   - def_list
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/daifuk00003-alt/ai-manual
+      name: GitHubリポジトリ
 
 nav:
   - ホーム: index.md

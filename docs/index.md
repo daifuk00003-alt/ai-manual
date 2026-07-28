@@ -6,11 +6,49 @@
 
 ## サイトの構成
 
-- **[用語集](glossary/index.md)** — AIやプログラミングに関する基本用語をまとめています。わからない言葉が出てきたら、まずここを確認してください。
-- **[ツール別基礎編](tools/index.md)** — ChatGPT・Gemini・Claude（チャット／Cowork／Code）・Codex・NotebookLM・Obsidianなど、ツールごとの仕組みと使い方を解説します。
-- **[応用編](advanced/index.md)** — 複数のツールを組み合わせた、より発展的な活用法を扱います。
-- **[気になる欄](curious/index.md)** — 「〇〇について教えて」と聞いたことを、その都度記録として蓄積していく場所です。
-- **[トレンド・更新ログ](updates/index.md)** — AI関連の最新動向や、このサイト自体の更新履歴を記録する棚です。
+<div class="grid cards" markdown>
+
+-   :material-book-open-page-variant:{ .lg .middle } **用語集**
+
+    ---
+
+    AIやプログラミングに関する基本用語をまとめています。わからない言葉が出てきたら、まずここを確認してください。
+
+    [:octicons-arrow-right-24: 用語集を見る](glossary/index.md)
+
+-   :material-toolbox:{ .lg .middle } **ツール別基礎編**
+
+    ---
+
+    ChatGPT・Gemini・Claude（チャット／Cowork／Code）・Codex・NotebookLM・Obsidianなど、ツールごとの仕組みと使い方を解説します。
+
+    [:octicons-arrow-right-24: ツール別基礎編を見る](tools/index.md)
+
+-   :material-lightbulb-on-outline:{ .lg .middle } **応用編**
+
+    ---
+
+    複数のツールを組み合わせた、より発展的な活用法を扱います。
+
+    [:octicons-arrow-right-24: 応用編を見る](advanced/index.md)
+
+-   :material-comment-question-outline:{ .lg .middle } **気になる欄**
+
+    ---
+
+    「〇〇について教えて」と聞いたことを、その都度記録として蓄積していく場所です。
+
+    [:octicons-arrow-right-24: 気になる欄を見る](curious/index.md)
+
+-   :material-trending-up:{ .lg .middle } **トレンド・更新ログ**
+
+    ---
+
+    AI関連の最新動向や、このサイト自体の更新履歴を記録する棚です。
+
+    [:octicons-arrow-right-24: トレンド・更新ログを見る](updates/index.md)
+
+</div>
 
 ## 読み方の目安
 
