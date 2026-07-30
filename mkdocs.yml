@@ -85,5 +85,6 @@ nav:
       - NotebookLM: tools/notebooklm.md
       - Obsidian等の保管庫系ツール: tools/obsidian.md
   - 応用編: advanced/index.md
+  - セキュリティ・リテラシー: security/index.md
   - 気になる欄: curious/index.md
   - トレンド・更新ログ: updates/index.md

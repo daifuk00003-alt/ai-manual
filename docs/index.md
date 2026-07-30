@@ -32,6 +32,14 @@
 
     [:octicons-arrow-right-24: 応用編を見る](advanced/index.md)
 
+-   :material-shield-lock-outline:{ .lg .middle } **セキュリティ・リテラシー**
+
+    ---
+
+    個人情報・機密情報をAIに入力していいかの考え方や、マル秘情報の管理方法をまとめます。
+
+    [:octicons-arrow-right-24: セキュリティ・リテラシーを見る](security/index.md)
+
 -   :material-comment-question-outline:{ .lg .middle } **気になる欄**
 
     ---
